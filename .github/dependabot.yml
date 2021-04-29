@@ -1,0 +1,24 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.springframework.boot:spring-boot-starter-parent
+    versions:
+    - 2.4.2
+    - 2.4.3
+    - 2.4.4
+  - dependency-name: org.eclipse.jetty:jetty-maven-plugin
+    versions:
+    - 11.0.0
+    - 11.0.1
+  - dependency-name: io.qameta.allure:allure-junit4
+    versions:
+    - 2.13.8
+  - dependency-name: com.opencsv:opencsv
+    versions:
+    - "5.3"
